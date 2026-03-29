@@ -1,21 +1,26 @@
-<main>
-   
-    <nav>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Tu Cesta - Gaby's Bagels</title>
+  <link rel="stylesheet" href="home.css">
+</head>
+<body>
+
+ <nav>
     <ul class="contenedor">
-      <li class="logo-item"> 
-        <img alt="logo" src="media/logo.jpg"> 
-      </li>
+      <li class="logo-item"> <img alt="logo" src="media/logo rw - cropped.png"> </li>
       <li><a href="index.html">INICIO</a></li>
       <li><a href="aboutus.html">ABOUT US</a></li>
       <li><a href="bagels.html">BAGELS</a></li>
-      <li><a href="#">CONTACTO</a></li>
-      <li><a href="carrito.html">CARRITO</a></li>
+      <li><a href="cesta.html"> <img alt="logo" src="media/CestaNoBg.png"></a></li>
     </ul>
   </nav>
-     <h2 style="text-align: center;">Tu Carrito de Compra</h2>
+  <main>
+     <h2 style="text-align: center;">Tu cesta de Compra</h2>
     <link rel="stylesheet" href="home.css">
     
-    <section id="resumen-carrito">
+    <section id="resumen-cesta">
       <fieldset>
         <legend>Artículos seleccionados</legend>
         <table class="menu-tabla" style="width: 100%; text-align: left;">
@@ -56,10 +61,43 @@
             <td> <input type="number" id="amount" name="amount" min="1" max="5" required /></td>
             <td><strong>11.90 €</strong></td>
           </tr>
+
+          <tr>
+            <td style="text-align: center;">
+              <img alt="GsFAVOURITE" src="media/GsFAVOURITE.webp" style="max-width: 100px;"><br>
+              <strong>Gaby's Favourite</strong>
+            </td>
+          <td>
+            <ul>
+              <li><label for="pan-select"><strong>Pan:</strong></label> 
+                  <select name="pan" id="pan-select">
+                    <option value="">--Escoja un pan--</option>
+                    <option value="Mix Semillas">Mix Semillas</option>
+                    <option value="Plain">Plain</option>
+                    <option value="Tomate">Tomate</option>
+                    <option value="Aceituna">Aceituna</option>
+                  </select>
+                </li> <li>
+                    <strong>Extras:</strong> 
+                    <input type="checkbox" id="ketchup" name="extras" value="ketchup" />
+                    <label for="ketchup">Ketchup</label>
+                  
+                    <input type="checkbox" id="mostaza" name="extras" value="mostaza" />
+                    <label for="mostaza">Mostaza</label>
+                
+                    <input type="checkbox" id="mayo" name="extras" value="mayo" />
+                    <label for="mayo">Mayo</label>
+                  </li>
+              </ul>
+          </td>
+            <td> <input type="number" id="amount" name="amount" min="1" max="5" required /></td>
+            <td><strong>13.90 €</strong></td>
+          </tr>
+        
         </table>
         
         <div style="text-align: right; margin-top: 20px;">
-          <h3 style="display: inline-block; margin-right: 20px;">Total: 11.90 €</h3>
+          <h3 style="display: inline-block; margin-right: 20px;">Total: 25.80 €</h3>
           <a href="#formulario-pago" class="btn btn-principal" style="font-size: 18px; padding: 12px 25px;">Proceder al pago</a>
         </div>
       </fieldset>
@@ -83,6 +121,9 @@
 
         <fieldset>
           <legend>Entrega</legend>
+          <label for="direccion">Dirección:</label><br>
+          <input type="" id="meeting-time" name="meeting-time" min="2026-06-07T00:00" /><br><br>
+
           <label for="meeting-time">Fecha y Hora de recogida:</label><br>
           <input type="datetime-local" id="meeting-time" name="meeting-time" min="2026-06-07T00:00" /><br><br>
 
@@ -97,3 +138,5 @@
       </form>
     </section>
   </main>
+</body>
+</html>
