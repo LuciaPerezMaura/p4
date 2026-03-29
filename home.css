@@ -1,0 +1,161 @@
+/* home.css */
+
+/* --- ESTILOS GENERALES PARA LOS BOTONES */
+.btn {
+  background-color: rgb(186, 65, 60);
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  display: inline-block;
+  border-color:  white;
+}
+
+.btn:hover {
+  background-color: #53201e;
+}
+
+.btn-principal {
+  font-weight: bold;
+}
+.btn-tercer {
+  font-weight: bold;
+  color: rgb(186, 65, 60);
+  background-color: white;
+
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif; /* Añadimos una fuente base para toda la página */
+  margin: 0;
+  padding: 0;
+  color:#53201e;
+  background-color:#f1f1f1; /* Un color de fondo suave */
+}
+ 
+select {
+  
+  display: inline-block; /* Permite que los márgenes funcionen mejor */
+  margin-top: 10px; /* Les da un pequeño respiro por arriba */
+  color:#53201e; /* Prueba a ponerles tu color rojo/granate */
+}
+
+.contenedor  {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  background: #a8413c;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenedor li { 
+  margin: 0 10px;
+}
+
+.contenedor img {
+  height: 40px; 
+  width: auto;
+  display: block;
+}
+.photo-item img {
+  height: 200px; 
+  width: auto;
+
+}
+.photo-pan img {
+  width: 100%;
+  max-width: 580px;
+  min-width: 200px;
+  height: auto; 
+
+}
+
+
+/* --- ESTILOS GENERALES PARA LAS TABLAS */
+
+.menu-tabla img {
+  height: 125px; 
+  width: auto;
+
+}
+
+.menu-tabla td {
+  vertical-align: middle; 
+  padding: 3px;
+}
+
+/* Hacemos que la columna del precio (la número 3) nunca se parta en dos líneas */
+.menu-tabla td:nth-child(3) {
+  white-space: nowrap; /* Obliga a que "5.50 €" se quede siempre en la misma línea */
+}
+
+/* --- ESTILOS ESPECÍFICOS SOLO PARA LA TABLA DEL CARRITO --- */
+/* Al poner "#resumen-carrito" delante, le decimos a CSS que esto SOLO 
+   aplique a la tabla que está dentro de esa sección, sin tocar la de los bagels */
+#resumen-carrito .menu-tabla td {
+  vertical-align: top; 
+  padding-top: 5px;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+/* --- 2. EVITAR QUE EL FIELDSET SE DESBORDE --- */
+fieldset {
+  max-width: 100%; /* Obliga al fieldset a no ser más ancho que su contenedor */
+  margin: 10px 0; /* Reducimos el margen lateral para que no se empuje a la derecha */
+}
+
+
+
+/* --- 3. ESTILOS FLUIDOS PARA LOS CAMPOS DEL FORMULARIO --- */
+/* Hacemos que los campos de texto ocupen el espacio disponible sin romper la caja */
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="datetime-local"],
+textarea,
+select {
+  width: 100%; /* Ocuparán el 100% del ancho de su fieldset */
+  max-width: 400px; /* Para que no se vean gigantes en pantallas de ordenador */
+  padding: 8px; /* Un poco de aire interior para que el texto respire */
+  margin-top: 5px; /* Separación con su etiqueta (label) */
+  margin-bottom: 15px; /* Separación con el siguiente elemento */
+  border: 1px solid #ccc;
+  border-radius: 4px; /* Bordes ligeramente redondeados */
+  font-family: Arial, Helvetica, sans-serif;
+}
+.contenedor a {
+  font-family: Helvetica, sans-serif;
+  font-size: 14px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  color: #f1f1f1;
+  user-select: none;
+}
+
+.contenedor li:hover {
+  background: #53201e;
+  border-radius: 5px; /* Un pequeño toque moderno */
+}
+
+/* Estilos básicos para que los formularios no se peguen a los bordes */
+form, fieldset, section {
+  margin: 20px;
+  padding: 15px;
+  background-color: #f1f1f1;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+/* --- CENTRAR EL CONTENIDO PRINCIPAL --- */
+main {
+  max-width: 900px; /* Limita el ancho máximo para que no se vea gigante en PC */
+  margin: 0 auto; /* El "auto" a los lados es la magia que centra el bloque entero */
+}

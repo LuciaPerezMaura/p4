@@ -1,0 +1,99 @@
+<main>
+   
+    <nav>
+    <ul class="contenedor">
+      <li class="logo-item"> 
+        <img alt="logo" src="media/logo.jpg"> 
+      </li>
+      <li><a href="index.html">INICIO</a></li>
+      <li><a href="aboutus.html">ABOUT US</a></li>
+      <li><a href="bagels.html">BAGELS</a></li>
+      <li><a href="#">CONTACTO</a></li>
+      <li><a href="carrito.html">CARRITO</a></li>
+    </ul>
+  </nav>
+     <h2 style="text-align: center;">Tu Carrito de Compra</h2>
+    <link rel="stylesheet" href="home.css">
+    
+    <section id="resumen-carrito">
+      <fieldset>
+        <legend>Artículos seleccionados</legend>
+        <table class="menu-tabla" style="width: 100%; text-align: left;">
+          <tr>
+            <th>Producto</th>
+            <th>Especificaciones</th>
+            <th>Cantidad</th>
+            <th>Subtotal</th>
+          </tr>
+          <tr>
+            <td style="text-align: center;">
+              <img alt="cesar" src="media/CESAR.webp" style="max-width: 100px;"><br>
+              <strong>César</strong>
+            </td>
+          <td>
+            <ul>
+              <li><label for="pan-select"><strong>Pan:</strong></label> 
+                  <select name="pan" id="pan-select">
+                    <option value="">--Escoja un pan--</option>
+                    <option value="Mix Semillas">Mix Semillas</option>
+                    <option value="Plain">Plain</option>
+                    <option value="Tomate">Tomate</option>
+                    <option value="Aceituna">Aceituna</option>
+                  </select>
+                </li> <li>
+                    <strong>Extras:</strong> 
+                    <input type="checkbox" id="ketchup" name="extras" value="ketchup" />
+                    <label for="ketchup">Ketchup</label>
+                  
+                    <input type="checkbox" id="mostaza" name="extras" value="mostaza" />
+                    <label for="mostaza">Mostaza</label>
+                
+                    <input type="checkbox" id="mayo" name="extras" value="mayo" />
+                    <label for="mayo">Mayo</label>
+                  </li>
+              </ul>
+          </td>
+            <td> <input type="number" id="amount" name="amount" min="1" max="5" required /></td>
+            <td><strong>11.90 €</strong></td>
+          </tr>
+        </table>
+        
+        <div style="text-align: right; margin-top: 20px;">
+          <h3 style="display: inline-block; margin-right: 20px;">Total: 11.90 €</h3>
+          <a href="#formulario-pago" class="btn btn-principal" style="font-size: 18px; padding: 12px 25px;">Proceder al pago</a>
+        </div>
+      </fieldset>
+    </section>
+
+    <section id="formulario-pago" style="margin-top: 60px;">
+      <h2 style="text-align: center;">Finalizar Pedido</h2>
+      
+      <form action="#" method="POST">
+        <fieldset>
+          <legend>Datos personales</legend>
+          <label for="name">Nombre:</label><br>
+          <input type="text" id="name" name="name" required minlength="4" maxlength="15" size="20" /><br><br>
+
+          <label for="phone">Teléfono (Formato: 123-456-7890):</label><br>
+          <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required /><br><br>
+
+          <label for="email">Email:</label><br>
+          <input type="email" id="email" name="email" size="30" required />
+        </fieldset>
+
+        <fieldset>
+          <legend>Entrega</legend>
+          <label for="meeting-time">Fecha y Hora de recogida:</label><br>
+          <input type="datetime-local" id="meeting-time" name="meeting-time" min="2026-06-07T00:00" /><br><br>
+
+          <label for="instructions">Instrucciones Especiales:</label><br>
+          <textarea id="instructions" name="instructions" rows="4" cols="50" placeholder="Alergias, notas para la cocina..."></textarea>
+        </fieldset>
+
+        <fieldset style="text-align: center; border: none; background: transparent; box-shadow: none;">
+          <input type="submit" value="Confirmar y Pagar" class="btn btn-principal" />
+          <input type="reset" value="Borrar Formulario" class="btn btn-tercer" /> 
+        </fieldset>
+      </form>
+    </section>
+  </main>
